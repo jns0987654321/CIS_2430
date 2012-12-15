@@ -1,0 +1,17 @@
+
+   Included in the librarysearch package is a set of java classes for the library search system.  The user can add a book or a journal at a time and search for the relevant references in terms of a call number, title keywords, or a time period with starting and ending years.  
+
+   To build the system, go one level above "librarysearch" folder and apply the following command:
+
+   javac librarysearch/*.java
+
+   To run the system, you can do either:
+
+   java librarysearch.LibrarySearch
+
+   or 
+
+   java librarysearch.LibrarySearchDemo
+
+
+

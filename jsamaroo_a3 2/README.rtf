@@ -1,0 +1,84 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf320
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10100\viewh15040\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\b\fs24 \cf0 Name:
+\b0  
+\b Junior Samaroo
+\b0 \
+
+\b Student I.D. # 0663108
+\b0 \
+\
+CIS 2430 Assignment #3\
+\
+
+\b Task:\
+
+\b0 Simplify code from Assignment #2 and add improvements(for this assignment i used the provided Sample Implementation code for Assignment2). Improvements include creating a super class for all books and journals and reducing the two ArrayLists into one in order to minimize code redundancy. Also to implement is the ability to load existing references from a file and save all references (existing plus new) to another specified file every time the program is run. Finally, a HashMap would be created for the title keywords so that the search performance can be greatly improved.\
+\
+
+\b Problem:\
+
+\b0 Various problems had to be solved. The first was creating the super class and finding common methods. Next was reducing the two array list to one. Both of these was not much of a problem. Then there was expanding the code to load existing references from a file and outputting all data to another file. The only problem here was finding a common way to input and output data to a file in the same format, which i chose as a new field for each line of text. This was more challenging, however the real challenge came with implementing the HashMaps. Having never done HashMaps before it was quite challenging and time consuming. A way to find if data was stored correctly in the HashMaps had to be found, which was found to be a simple print statement. The most challenging part of the hashMaps was reducing the searching of the HashMaps to the intersection of common elements. This was achieved by using a temporary array list and and the method "retainAll" to keep common 'values'. Then finally a way to implement both sequential and HashMap searching had to be found. This was achieved by using a simple if statement when no title keywords was entered.\
+\
+
+\b Assumptions and Limitations:
+\b0 \
+It is assumed that only one "Library" is being worked with i.e. not multiple libraries having multiple records of books and journals. Also data is only stored to the output file if the program is exited from the command loop. The program also cannot load multiple files at the same time nor output to multiple files. It is also assumed that all keywords of title 
+\i must
+\i0  be found to find its associated record. It is also assumed that the roved sample implementation code used was working perfectly.\
+\
+
+\b Build/Test:\
+
+\b0 The program consists of four classes:\
+			1) Reference\
+			2) Book\
+			3) Journal\
+			4) LibrarySearch (main class)\
+To run the program, user must compile "LibrarySearch.java" by typing "javac LibrarySearch.java" from a terminal within its directory. After compilation the user must run the compiled code by typing "java LibrarySearch <inputFile> <outputFile>" within the terminal. One can test the program by entering various record information and then trying to search for stored information. Also the user can try loading and outputting to various files.\
+\
+NOTE: an input and output fie should be specified at the command line separated 	   by a space.\
+\
+
+\b Examples of Test Cases:\
+\
+
+\b0 Input file: test.txt\
+Output file: test.txt
+\b \
+\
+
+\b0 Adding these:\
+\
+Book:\
+CallNumber: QA76.73.J38S265\
+Authors: Walter Savitch,\
+Title: Absolute Java\
+Publisher: Addision-Wesley\
+Year: 2009\
+\
+Journal:\
+CallNumber: P98.C6116\
+Title: Kenrich Mock JAVA Computational Linguistics\
+Organization: Association for Computational Linguistics\
+Year: 2008\
+\
+A search for  the title "java" would result in both being found via searching the HashMap.\
+A search for the title "java" and year range "2009-2010" would result in the book being found, via searching the HashMap and sequentially searching the intersection 'values' of HashMap for the year.\
+Running the program a second time loading the test.txt file will result in the references being loaded into memory which the user can search.\
+\
+
+\b Improvements:
+\b0 \
+A GUI interface would be more user friendly. Also being able to search specific fields such as 'Authors' can be implemented. Loading multiple reference files would also be beneficial.\
+\
+
+\b \
+\
+\
+\
+}
